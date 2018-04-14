@@ -45,6 +45,22 @@ int menu2(int *opt){
 	return *opt;
 }
 
+int menu3(int *opt){
+	system(CLEAR);
+	printf("+------------------------------------------+\n");
+	printf("| [1] - Inserir elemento                   |\n");
+	printf("| [2] - Imprimir lista                     |\n");
+	printf("| [3] - Remover um elemento da lista       |\n");
+	printf("| [4] - Imprimir a media total             |\n");
+	printf("| [0] - Sair                               |\n");
+	printf("+------------------------------------------+\n");
+	printf("\nInforme uma opcao: ");
+	scanf("%d", opt);
+	system(CLEAR);
+	return *opt;
+}
+
+
 void errorMsg(){
 	printf("\n+--------------------+\n");
 	printf("|   OPCAO INVALIDA   |\n");
