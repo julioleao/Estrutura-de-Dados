@@ -5,16 +5,7 @@
 	RA: 1916033
 	Estrutura de Dados
 	Engenharia de Software 2018/01
-	as estruturas: lista encadeada e lista duplamente encadeada são semelhantes;
-	implemente as mesmas operações adicionais que foram explicadas na aula passada:
-	encontrar o maior elemento;
-	encontrar o menor elemento;
-	inserir de forma ordenada;
-	inserir no fim de uma lista;
-	remover do início de uma lista;
-	remover do fim de uma lista;
-	escreva alguns parágrafos dizendo: o fato da lista ser duplamente encadeada
-	pode melhorar o custo de alguma das operações? por que?
+	TAD - Lista Simplesmente Encadeada
  *
  *
  */

@@ -140,6 +140,7 @@ void mean(){
 	}
 }
 
+// Função para remover qualquer valor que o usuário digitar
 void deleteSpecific(){
 
     if(head == NULL){                     									// Checar se a lista está vazia (head == NULL)

@@ -14,7 +14,6 @@ void pause(){
 
 // Funcao menu principal
 int menu(int *opt){
-	system(CLEAR);
 	printf("+-------------------------------------------------------+\n");
 	printf("| [1] - Inserir de forma ordenada                       |\n");
 	printf("| [2] - Inserir no fim de uma lista                     |\n");
@@ -62,13 +61,13 @@ int menu3(int *opt){
 
 
 void errorMsg(){
-	printf("\n+--------------------+\n");
-	printf("|   OPCAO INVALIDA   |\n");
-	printf("+--------------------+\n");
+	printf("\n\t+--------------------+\n");
+	printf("\t|   OPCAO INVALIDA   |\n");
+	printf("\t+--------------------+\n");
 }
 
 void byeMsg(){
-	printf("\n+-------------------------------------+\n");
-	printf("|   VALEU, FALOU E ATE....ATE MAIS.   |\n");
-	printf("+-------------------------------------+\n\n");
+	printf("\n\t+-------------------------------------+\n");
+	printf("\t|   VALEU, FALOU E ATE....ATE MAIS.   |\n");
+	printf("\t+-------------------------------------+\n\n");
 }
