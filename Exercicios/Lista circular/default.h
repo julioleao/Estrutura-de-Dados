@@ -33,6 +33,8 @@ int menu(int *opt){
 int menu2(int *opt){
 	system(CLEAR);
 	printf("+------------------------------------------+\n");
+	printf("|                   MENU                   |\n");
+	printf("+------------------------------------------+\n");
 	printf("| [1] - Lista simplesmente encadeada       |\n");
 	printf("| [2] - Lista duplamente encadeada         |\n");
 	printf("| [3] - Lista circular                     |\n");
@@ -46,6 +48,8 @@ int menu2(int *opt){
 
 int menu3(int *opt){
 	system(CLEAR);
+	printf("+------------------------------------------+\n");
+	printf("|      LISTA CIRCULAR - MEDIA VALORES      |\n");
 	printf("+------------------------------------------+\n");
 	printf("| [1] - Inserir elemento                   |\n");
 	printf("| [2] - Imprimir lista                     |\n");

@@ -56,16 +56,17 @@ void orderedInsertCircle(Circle **head) {
 	Circle *new = (Circle*) malloc (sizeof(Circle));
 
 	new->number = number;
-	  // Case 1 of the above algo
+	// Se a list estiver vazia, insira na primeira posição
   	if (current == NULL){
      	new->next = new;
      	*head = new;
   	}
  
-  	// Case 2 of the above algo
+  	// Caso contrário, verifique se o valor atual é maior ou igual ao valor inserido
+  	// Se for, entre . 
   	else if (current->number >= new->number){
-    /* If value is smaller than head's value then
-      we need to change next of last node */
+    /* Se o valor for menor que o valor de head, então
+      precisamos o next do ultimo nó */
     	while(current->next != *head){
         	current = current->next;
     	}
@@ -74,9 +75,8 @@ void orderedInsertCircle(Circle **head) {
 	    *head = new;
   	}
  
-  	// Case 3 of the above algo
   	else{
-    /* Locate the node before the point of insertion */
+    /* Localizar o nó antes do ponto de inserção */
     	while (current->next!= *head && current->next->number < new->number){
       		current = current->next;
     	}
@@ -143,15 +143,19 @@ Circle* removeAtEndCircle(Circle * head){
 		printf("Lista vazia!\n");
     	return NULL;
     } else {
-    	Circle * last = head->next;
-    	Circle * penultimate = head->next;
+		Circle * last = head;
+    	Circle * penultimate = head;
     	if(last->next == head){
     		printf("\nUltimo valor removido com sucesso!\n");
     		free(last);
     		return NULL;
     	} else {
-    		head = head->next;
-    		last = head;
+    		while(last->next != head){
+    			penultimate = last;
+				last = last->next;
+			}
+    		penultimate->next = last->next;
+    		free(last);
     		printf("\nUltimo valor removido com sucesso!\n");
     	}
 		
@@ -165,21 +169,22 @@ Circle * removeAtStartCircle(Circle * head){
 		printf("Lista vazia!\n");
 		return NULL;
 	}
-	Circle * last = head;
+	Circle * begin = head;
 	Circle * nextNode = head->next;
-	if(last->next == head){
+	if(begin->next == head){
+		printf("\nPrimeiro valor removido com sucesso!\n");
 		return NULL;
 	}else{
 		
-		while(last->next != head){
-			last = last->next;
+		while(begin->next != head){
+			begin = begin->next;
 		}
 
-		if (last == NULL){
+		if (begin == NULL){
 			return head;
 		}
 
-		last->next = nextNode;
+		begin->next = nextNode;
 		free(head);
 		printf("\nPrimeiro valor removido com sucesso!\n");
 	}
